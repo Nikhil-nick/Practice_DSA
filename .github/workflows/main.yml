@@ -26,12 +26,20 @@ jobs:
         find . -name "*.java" > sources.txt
         javac -d out @sources.txt
 
-    - name: Run All main() Classes
+    - name: Run all main() classes
       run: |
         cd out
         find . -name "*.class" | while read file; do
           classname=$(echo $file | sed 's|./||; s|/|.|g; s|.class$||')
-          echo "Running $classname"
+          
+          # Skip inner/nested classes
+          if echo "$classname" | grep -q "\$"; then
+            echo "Skipping nested class $classname"
+            continue
+          fi
+    
+          echo "Attempting to run $classname"
           timeout 10s java $classname || { echo "$classname failed"; exit 1; }
         done
+
 
