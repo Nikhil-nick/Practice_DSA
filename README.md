@@ -20,3 +20,10 @@ A collection of practice problems to improve programming and problem-solving ski
     - OOPs (Object-Oriented Programming)
     - Exception Handling
     - Collections Framework
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nikhil-nick/Practice_DSA.git
+   cd Practice_DSA
