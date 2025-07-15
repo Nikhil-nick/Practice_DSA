@@ -12,7 +12,7 @@ package GS.DSA.DSA;
 public class Atoi {
 
 	public static void main(String[] args) {
-		String s = "1y23";
+		String s = "123";
 		int sign = 1;
 		int num = 0;
 		int j = 0;

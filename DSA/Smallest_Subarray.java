@@ -10,23 +10,33 @@
 package GS.DSA.DSA;
 
 public class Smallest_Subarray {
+	public static int shortestSubarrayWithSum(int[] arr, int K) {
+		int minLength = Integer.MAX_VALUE;
+
+		for (int start = 0; start < arr.length; start++) {
+			int currentSum = 0;
+
+			for (int end = start; end < arr.length; end++) {
+				currentSum += arr[end];
+
+				if (currentSum == K) {
+					int currentLength = end - start + 1;
+					minLength = Math.min(minLength, currentLength);
+					break;  // No need to extend this window further
+				}
+			}
+		}
+
+		return (minLength == Integer.MAX_VALUE) ? -1 : minLength;
+	}
+
 	public static void main(String[] args) {
-		int[] a = {5, 8, 50, 4};
-		int k = 50;
-		int  sum=0; int min=Integer.MAX_VALUE;
-		int n=a.length; int start=0,end;
-		    for (end = 0; end < n; end++) {
-		    	sum=sum+a[end];
-		    	
-		    	while(sum>=k) {
-		    		if(sum==k) {
-		    			min=Math.min(min, end-start+1);
-		    		}
-		    		sum=sum-a[start];
-		    		start++;
-		    	}
-		    }
-		    int ans= (min==Integer.MAX_VALUE)?-1:min;
-		    System.out.println(ans);
+		int[] arr1 = {2, 4, 6, 10, 2, 1};
+		int K1 = 12;
+		System.out.println(shortestSubarrayWithSum(arr1, K1));  // Output: 2
+
+		int[] arr2 = {5, 8, 50, 4};
+		int K2 = 50;
+		System.out.println(shortestSubarrayWithSum(arr2, K2));  // Output: 1
 	}
 }

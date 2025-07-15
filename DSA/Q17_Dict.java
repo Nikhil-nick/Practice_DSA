@@ -46,7 +46,6 @@ public class Q17_Dict {
 		List<String> list=new ArrayList<String>();
 		
 		for(String var:dict) {
-			//System.out.println(var);
 			if(isAnagram(var,input)) {
 				list.add(var);
 			}

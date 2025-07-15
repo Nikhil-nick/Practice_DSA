@@ -14,7 +14,7 @@ public class RLE {
 		StringBuilder ans = new StringBuilder();
 		int n=s.length();
 		int count = 1;
-		for (int i = 0; i < s.length() - 1; i++) {
+		for (int i = 0; i < n - 1; i++) {
 			if (s.charAt(i) == s.charAt(i + 1)) {
 				count++;
 			} else {

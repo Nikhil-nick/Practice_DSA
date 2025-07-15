@@ -12,12 +12,12 @@ public class Q2_Dict {
 
 		String[] s = { "CODGE", "ODG", "LODGES", "SODG", "dodge", "mODJ", "LODKGESSSS" };
 		String s1 = "ODG";
-		int max1 = 0; String ans="";
+		int max = 0; String ans="";
 		for (int i = 0; i < s.length; i++) {
 			if (s[i].contains(s1)) {
-				if(s[i].length()>max1) {
+				if(s[i].length()>max) {
 					ans=s[i];
-					max1=s[i].length();
+					max=s[i].length();
 				}
 			}
 		}
