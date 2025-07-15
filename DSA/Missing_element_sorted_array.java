@@ -1,14 +1,13 @@
-//"Given a sorted rotated array,
-//    return the minimum element from it.
+//"Given a sorted array of non-negative integers of size n,
+//    return the smallest missing integer.
 //
 //Examples:
-//    int[] arr1 = {5, 6, 1, 2, 3, 4};    //Return 1
+//    int[] arr1 = {1, 2, 3, 4};    // Return 0
 //
-//    int[] arr2 = {1, 2, 3, 4};            //Return 1"
-
+//    int[] arr2 = {0, 1, 3, 4};    // Return 2"
 package GS.DSA.DSA;
 
-public class Smallest_element_sorted_array {
+public class Missing_element_sorted_array {
 	 public static void main(String args[]){
 
 //               Examples:

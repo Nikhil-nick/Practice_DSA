@@ -4,7 +4,7 @@
 //arr1[] = {2, 3, 5, 8}
 //arr2[] = {10, 12, 14, 16, 18, 20}
 //
-/// /Return 11 as the median"
+//Return 11 as the median"
 
 package GS.DSA.DSA;
 
@@ -19,7 +19,6 @@ public class Median_sorted_array {
 				c[i] = a[k];
 				k++;
 			} else {
-
 				c[i] = b[j];
 				j++;
 			}

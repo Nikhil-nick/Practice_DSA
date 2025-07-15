@@ -10,7 +10,6 @@ public class Bishop_Movement {
         if ((x + y) % 2 != (t1 + t2) % 2) {
             return "NO";
         }
-
         int k;
         if (x == t1 && y == t2) {
             k = 0; 
