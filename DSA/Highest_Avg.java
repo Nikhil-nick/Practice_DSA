@@ -21,41 +21,45 @@ import java.util.Map.Entry;
 
 public class Highest_Avg {
 
-	public static int highAverage(String[][] records) {
-		Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
-		for (String[] s : records) {
-			String s1 = s[0];
-			if (map.containsKey(s1)) {
-				List<Integer> val = map.get(s1);
-				val.set(0, val.get(0) + 1);
-				val.set(1, val.get(1) + Integer.valueOf(s[1]));
-				map.put(s1, val);
-			} else {
-				List<Integer> list = new ArrayList<Integer>();
-				list.add(1);
-				list.add(Integer.valueOf(s[1]));
-				map.put(s1, list);
+	public static double highestAverage(String[][] marksList) {
+		Map<String, Integer> totalMarks = new HashMap<>();
+		Map<String, Integer> counts = new HashMap<>();
+
+		for (String[] entry : marksList) {
+			String name = entry[0];
+			int marks = Integer.parseInt(entry[1]);
+
+			totalMarks.put(name, totalMarks.getOrDefault(name, 0) + marks);
+			counts.put(name, counts.getOrDefault(name, 0) + 1);
+		}
+
+		double maxAverage = Double.NEGATIVE_INFINITY;
+		String topStudent = "";
+
+		for (String student : totalMarks.keySet()) {
+			double average = (double) totalMarks.get(student) / counts.get(student);
+
+			if (average > maxAverage) {
+				maxAverage = average;
+				topStudent = student;
 			}
-
 		}
-		double ans = Double.NEGATIVE_INFINITY;
-		for (Entry<String, List<Integer>> mm : map.entrySet()) {
 
-			List<Integer> list = mm.getValue();
+		System.out.println("Top student: " + topStudent + " with average: " + maxAverage);
 
-			double an = (double) list.get(1) / list.get(0);
-			ans = Math.max(an, ans);
-		}
-		System.out.println(map);
-		System.out.println(ans);
-		return 0;
+		return maxAverage;
 	}
 
 	public static void main(String[] args) {
-		String[][] records = { { "Charles", "84" }, { "John", "100" }, { "Andy", "37" }, { "John", "23" },
-				{ "Charles", "20" } };
+		String[][] marksList = {
+				{"Charles", "84"},
+				{"John", "100"},
+				{"Andy", "37"},
+				{"John", "23"},
+				{"Charles", "20"}
+		};
 
-		double result = highAverage(records);
-		System.out.println("Highest average marks: " + result);
+		double highestAvg = highestAverage(marksList);
+		System.out.println("Highest Average: " + highestAvg);  // Output: 61.5
 	}
 }

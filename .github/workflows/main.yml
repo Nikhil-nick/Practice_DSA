@@ -1,0 +1,45 @@
+name: Java Main Methods CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Compile Java
+      run: |
+        mkdir out
+        find . -name "*.java" > sources.txt
+        javac -d out @sources.txt
+
+    - name: Run all main() classes
+      run: |
+        cd out
+        find . -name "*.class" | while read file; do
+          classname=$(echo $file | sed 's|./||; s|/|.|g; s|.class$||')
+          
+          # Skip inner/nested classes
+          if echo "$classname" | grep -q "\$"; then
+            echo "Skipping nested class $classname"
+            continue
+          fi
+    
+          echo "Attempting to run $classname"
+          timeout 10s java $classname || { echo "$classname failed"; exit 1; }
+        done
+
+

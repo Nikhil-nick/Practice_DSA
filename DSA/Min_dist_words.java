@@ -14,25 +14,32 @@ import java.util.*;
 
 public class Min_dist_words {
 
-	public static void main(String[] args) {
-		String s = "the quick the brown quick brown the frog";
-		String a[] = s.split("\\s+");
-		System.out.println(Arrays.toString(a));
-		int f = -1, q = -1;
-		int min = Integer.MAX_VALUE;
-		for (int i = 0; i < a.length; i++) {
-			if (a[i].equals("frog")) {
-				f = i;
+	public static int minDistance(String str, String word1, String word2) {
+		String[] words = str.split("\\s+");
+		int minDistance = Integer.MAX_VALUE;
+		int lastPos1 = -1, lastPos2 = -1;
+
+		for (int i = 0; i < words.length; i++) {
+			if (words[i].equals(word1)) {
+				lastPos1 = i;
+			} else if (words[i].equals(word2)) {
+				lastPos2 = i;
 			}
-			if (a[i].equals("quick")) {
-				q = i;
-			}
-			
-			if(f!=-1 && q!=-1) {
-				int d=Math.abs(f-q)-1;
-				min=Math.min(min, d);
+
+			if (lastPos1 != -1 && lastPos2 != -1) {
+				int distance = Math.abs(lastPos1 - lastPos2)-1;
+				minDistance = Math.min(minDistance, distance);
 			}
 		}
-		System.out.println(min);
+
+		return (minDistance == Integer.MAX_VALUE) ? -1 : minDistance;
+	}
+
+	public static void main(String[] args) {
+		String str = "the quick the brown quick brown the frog";
+		String word1 = "quick";
+		String word2 = "frog";
+
+		System.out.println(minDistance(str, word1, word2));  // Output: 2
 	}
 }
