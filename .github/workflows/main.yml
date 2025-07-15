@@ -20,15 +20,18 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Compile Java files
+    - name: Compile Java
       run: |
+        mkdir out
         find . -name "*.java" > sources.txt
-        javac @sources.txt
+        javac -d out @sources.txt
 
-    - name: Run all main() classes
+    - name: Run All main() Classes
       run: |
-        find . -name "*.java" | while read file; do
-          classname=$(echo $file | sed 's|./||; s|/|.|g; s|.java$||')
+        cd out
+        find . -name "*.class" | while read file; do
+          classname=$(echo $file | sed 's|./||; s|/|.|g; s|.class$||')
           echo "Running $classname"
           timeout 10s java $classname || { echo "$classname failed"; exit 1; }
         done
+
