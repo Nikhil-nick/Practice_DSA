@@ -19,8 +19,8 @@ public class Trapping_rainwater {
 			r[i] = Math.max(r[i + 1], a[i]);
 		}
 		
-		System.out.println(Arrays.toString(l));
-		System.out.println(Arrays.toString(r));
+		//System.out.println(Arrays.toString(l));
+		//System.out.println(Arrays.toString(r));
 		
 		for (int i = 0; i < a.length ; i++) {
 			int min=Math.min(l[i], r[i]);
