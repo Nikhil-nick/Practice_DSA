@@ -39,7 +39,9 @@ jobs:
           fi
     
           echo "Attempting to run $classname"
+          echo "Output of $classname:"
           timeout 10s java $classname || { echo "$classname failed"; exit 1; }
+          echo "-----------------------------"
         done
 
 
