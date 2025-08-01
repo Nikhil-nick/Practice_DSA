@@ -1,7 +1,8 @@
-//"Given a matrix of size m * n,
-//    return the miniimum path sum in the matrix.
-//    [You start from the top-left corner of the matrix and may up, down and diagonally].
-
+/*
+ "Given a matrix of size m * n,
+    return the miniimum path sum in the matrix.
+    [You start from the top-left corner of the matrix and may up, down and diagonally].
+*/
 package GS.DSA.DSA;
 
 public class MinFallPath {

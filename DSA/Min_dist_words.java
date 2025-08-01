@@ -1,13 +1,14 @@
-//"Given a sentence/phrase and two words,
-//    return the minimum distance between the words.
-//
-//Example:
-//    String str = “the quick the brown quick brown the frog”
-//    String word1 = “quick”
-//    String word2 = ""frog""
-//
-//    //Return 2"
+/*
+ "Given a sentence/phrase and two words,
+    return the minimum distance between the words.
 
+Example:
+    String str = “the quick the brown quick brown the frog”
+    String word1 = “quick”
+    String word2 = ""frog""
+
+    //Return 2"
+*/
 package GS.DSA.DSA;
 
 import java.util.*;

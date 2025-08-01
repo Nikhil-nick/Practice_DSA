@@ -1,11 +1,12 @@
-//"Given a dictionary (list of words) and a substring, you have to return the length of the longest word in the dictinary containing the substring.
-//
-//Example:
-//String[] dict = {""CODGE"", ""ODG"", ""LODGES"", ""SODG"", ""dodge"", ""mODJ"", ""LODGESSSS""}
-//String toSearch = ""ODG"";
-//
-//Returns 9 (LODGESSSS)"
+/*
+ "Given a dictionary (list of words) and a substring, you have to return the length of the longest word in the dictinary containing the substring.
 
+Example:
+String[] dict = {""CODGE"", ""ODG"", ""LODGES"", ""SODG"", ""dodge"", ""mODJ"", ""LODGESSSS""}
+String toSearch = ""ODG"";
+
+Returns 9 (LODGESSSS)"
+*/
 package GS.DSA.DSA;
 public class Q2_Dict {
 	public static void main(String[] args) {

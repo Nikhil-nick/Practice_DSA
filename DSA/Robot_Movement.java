@@ -1,13 +1,14 @@
-//"Given the string (containing directions e.g., U, R, D, L) and initial coordinates (0,0),
-//return the final coordinates after traversing the string.
-//
-//Examples:
-//Given (0,0) and String - ""UUU""
-//    Answer : (0,3)
-//
-//Given (0,0) and String - ""URRDDL""
-//    Answer : (1,-1)
+/*
+ "Given the string (containing directions e.g., U, R, D, L) and initial coordinates (0,0),
+return the final coordinates after traversing the string.
 
+Examples:
+Given (0,0) and String - ""UUU""
+    Answer : (0,3)
+
+Given (0,0) and String - ""URRDDL""
+    Answer : (1,-1)
+*/
 package GS.DSA.DSA;
 import java.util.*;
 public class Robot_Movement {

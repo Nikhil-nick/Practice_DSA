@@ -1,13 +1,14 @@
-//"Given an array of integers (positive and negative),
-//    return length of the loop, if it exists. Else return -1.
-//    [ Rules for the movement - Index to move to,
-//        for +ve numbers - (i + arr[i])%n
-//        for -ve numbers - (i - arr[i])%n ]
-//
-//Example:
-//    int[] arr = {2, -1, 1, 2, 2}
-//    // Returns 3  [There is a loop in this array because 0 moves to 2, 2 moves to 3, and 3 moves to 0.]"
+/*
+	"Given an array of integers (positive and negative),
+    return length of the loop, if it exists. Else return -1.
+    [ Rules for the movement - Index to move to,
+        for +ve numbers - (i + arr[i])%n
+        for -ve numbers - (i - arr[i])%n ]
 
+Example:
+    int[] arr = {2, -1, 1, 2, 2}
+    // Returns 3  [There is a loop in this array because 0 moves to 2, 2 moves to 3, and 3 moves to 0.]"
+*/
 package GS.DSA.DSA;
 
 public class Circular_arrayloop {

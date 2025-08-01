@@ -1,8 +1,9 @@
-//"Pascal Triangle
-//        generate the Pascal Triangle, OR
-//        generate a specified row of the Pascal Triangle, OR
-//        calculate the element at a specified row and column."
-
+/*
+ "Pascal Triangle
+        generate the Pascal Triangle, OR
+        generate a specified row of the Pascal Triangle, OR
+        calculate the element at a specified row and column."
+*/
 package GS.DSA.DSA;
 import java.util.ArrayList;
 import java.util.List;

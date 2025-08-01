@@ -1,13 +1,14 @@
-//"Prefix Search
-//    Given a document and a prefix, return all the words starting with the prefix.
-//
-//Example:
-//Say the document is a string of words,
-//    String[] arr = {""apple"", ""applet"", ""bread"", ""aper""};
-//    String prefix = ""app"";
-//
-//    // Return apple, applet"
+/*
+ "Prefix Search
+    Given a document and a prefix, return all the words starting with the prefix.
 
+Example:
+Say the document is a string of words,
+    String[] arr = {""apple"", ""applet"", ""bread"", ""aper""};
+    String prefix = ""app"";
+
+    // Return apple, applet"
+*/
 package GS.DSA.DSA;
 
 import java.util.*;

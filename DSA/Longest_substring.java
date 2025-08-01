@@ -1,9 +1,10 @@
-//"Given a string,
-//    return the starting index & length of the longest substring containing the same character.
-//
-//Example:
-//    String[] str = ""aabbbbCCddd"";    // Return 2 (index) and substring ""bbbb"""
+/*
+ "Given a string,
+    return the starting index & length of the longest substring containing the same character.
 
+Example:
+    String[] str = ""aabbbbCCddd"";    // Return 2 (index) and substring ""bbbb"""
+*/
 package GS.DSA.DSA;
 
 public class Longest_substring {

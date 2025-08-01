@@ -1,10 +1,11 @@
-//"Given a string,
-//    return the pallindrome of maximum length and its length.
-//    (So, you return both the relevant pallindrome substring and its length).
-//
-//Example:
-//    String str = ""forgeeksskeegfor"";    // Return {""geeksskeeg"",  10}"
+/*
+ "Given a string,
+    return the pallindrome of maximum length and its length.
+    (So, you return both the relevant pallindrome substring and its length).
 
+Example:
+    String str = ""forgeeksskeegfor"";    // Return {""geeksskeeg"",  10}"
+*/
 package GS.DSA.DSA;
 
 public class longest_palindrome {

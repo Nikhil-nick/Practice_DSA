@@ -1,11 +1,12 @@
-//"Find the median of two sorted arrays of different sizes.
-//
-//Example:
-//arr1[] = {2, 3, 5, 8}
-//arr2[] = {10, 12, 14, 16, 18, 20}
-//
-//Return 11 as the median"
+/*
+ "Find the median of two sorted arrays of different sizes.
 
+Example:
+arr1[] = {2, 3, 5, 8}
+arr2[] = {10, 12, 14, 16, 18, 20}
+
+Return 11 as the median"
+*/
 package GS.DSA.DSA;
 
 import java.util.*;

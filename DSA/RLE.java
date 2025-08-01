@@ -1,10 +1,11 @@
-//"Convert a string as given in the format below:
-//
-//Example:
-//aabbb into a2b3
-//aaaa into a4
-//a into a1"
+/*
+ "Convert a string as given in the format below:
 
+Example:
+aabbb into a2b3
+aaaa into a4
+a into a1"
+*/
 
 package GS.DSA.DSA;
 

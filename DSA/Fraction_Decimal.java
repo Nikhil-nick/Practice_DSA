@@ -1,21 +1,21 @@
 /*
+************************************************************************************************
 https://www.geeksforgeeks.org/dsa/represent-the-fraction-of-two-numbers-in-the-string-format/
- */
+************************************************************************************************
+"Given two integers representing the numerator and denominator of a fraction,
+    return the fraction in string format.
+    [If the fractional part is repeating, enclose the repeating part in parentheses].
 
-//"Given two integers representing the numerator and denominator of a fraction,
-//    return the fraction in string format.
-//    [If the fractional part is repeating, enclose the repeating part in parentheses].
-//
-//Examples:
-//    Numerator = 1, Denominator = 2
-//    // Return ""0.5""
-//
-//    Numerator = 1, Denominator = -2
-//    // Return ""-0.5""
-//
-//    Numerator = 50, Denominator = 22
-//    // Return ""2.(27)""  [Fractional part (27) is repeating, hence enclosed in paranthesis]"
+Examples:
+    Numerator = 1, Denominator = 2
+    // Return ""0.5""
 
+    Numerator = 1, Denominator = -2
+    // Return ""-0.5""
+
+    Numerator = 50, Denominator = 22
+    // Return ""2.(27)""  [Fractional part (27) is repeating, hence enclosed in paranthesis]"
+*/
 package GS.DSA.DSA;
 import java.util.HashMap;
 import java.util.Map;
